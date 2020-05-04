@@ -18,15 +18,16 @@ meterpreter_reverse_https and meterpreter_reverse_tcp works as well. (requires m
 
 This automated script is bulit over technique demonstrated by the author of following blog. All credits for technique/ detailed explanation of how this is built can be found here:
 
-(https://khast3x.club/posts/2020-02-09-C2-Protection-Socat-Docker/)
+https://khast3x.club/posts/2020-02-09-C2-Protection-Socat-Docker/
 
 
-These infrastructure can be setup and teardown in very limited time.
+
 
 ## Prerequisites
 
 * terraform must be installed
 * ansible(python 3)must be installed.
+''' pip3 install ansible '''
 * your IAM account credentials (Aws access key and secret key) with admin privileges.
 * AWS Region to be deployed and image(tested on ubuntu and works on debain) AMI code.
 
