@@ -38,3 +38,7 @@ pip3 install ansible
 export ANSIBLE_HOST_KEY_CHECKING=False
 ```
 
+##Getting Started
+
+* Only files we touch for changing configuration is vars.tf and terraform.tfvars
+
