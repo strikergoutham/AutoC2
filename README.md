@@ -40,15 +40,15 @@ export ANSIBLE_HOST_KEY_CHECKING=False
 
 ## Getting Started
 
-* Only files we touch for changing configuration is **vars.tf** and **terraform.tfvars**\
-* first generate SSH keys for setting up public key authentication on any launched instances.\
+* Only files we touch for changing configuration is **vars.tf** and **terraform.tfvars**.  
+* first generate SSH keys for setting up public key authentication on any launched instances.  
 ```bash
 ssh-keygen -f keyy
 ```
-* inside **vars.tf** , update the path to keys in PRIVATE_KEY , PUBLIC_KEY and other values such as region_aws and AMI value (can be found at cloud-images.ubuntu.com)\
-* inside **terraform.tfvars** , update IAM user access key and secret key.\
+* inside **vars.tf** , update the path to keys in PRIVATE_KEY , PUBLIC_KEY and other values such as region_aws and AMI value (can be found at cloud-images.ubuntu.com). 
+* inside **terraform.tfvars** , update IAM user access key and secret key. 
 
-* run the following command inside this repo project root to initiatize resources
+* run the following command inside this repo project root to initiatize resources. 
 
 ```bash
 terraform init
