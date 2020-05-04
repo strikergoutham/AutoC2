@@ -16,6 +16,8 @@ Brief outline of what the script does :
 3. uses meterpreter_reverse_http as payload and similar payloads such as 
 meterpreter_reverse_https and meterpreter_reverse_tcp works as well. (requires modification to docker_delivery.rc file)
 
+This automated script is bulit over technique demonstrated by the author of following blog. All credits for technique/ detailed explanation of how this is built can be found here:
+
 
 
 These infrastructure can be setup and teardown in very limited time.
