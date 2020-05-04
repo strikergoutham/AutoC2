@@ -27,8 +27,10 @@ https://khast3x.club/posts/2020-02-09-C2-Protection-Socat-Docker/
 
 * terraform must be installed
 * ansible(python 3)must be installed.
-'''bash
-pip3 install ansible '''
+```bash
+pip3 install ansible
+```
+
 * your IAM account credentials (Aws access key and secret key) with admin privileges.
 * AWS Region to be deployed and image(tested on ubuntu and works on debain) AMI code.
 
