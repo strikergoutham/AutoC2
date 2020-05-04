@@ -59,7 +59,27 @@ ssh-keygen -f keyy
 terraform init
 ```
 
-* Now run the following command to bring up the c2 server . this inturn calls up the ansible playbook to set up the software provisioning.
+* Now run the following command to bring up the c2 server . this inturn calls up the ansible playbook to set up the software provisioning and isolated docker network.
 ```bash
 terraform apply
+```
+
+* That's it! Infra is set up. Now ssh to the C2 instance using same priv key which was generated before and execute **docker_delivery.rc** metasploit script to start listening for connections.
+```bash
+SSH -i kkey ubuntu@c2-ip
+```
+
+* Verify containers are running.
+```bash
+sudo docker container ls
+```
+
+* Execute metasploit auto handler script inside msf container.
+and wait for victim sessions.
+
+```bash
+sudo docker container exec -it msf /bin/bash
+
+./msfconsole -r docker_delivery.rc
+
 ```
