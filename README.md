@@ -45,4 +45,11 @@ export ANSIBLE_HOST_KEY_CHECKING=False
 ```bash
 ssh-keygen -f keyy
 ```
+* inside **vars.tf** , update the path to keys in PRIVATE_KEY , PUBLIC_KEY and other values such as region_aws and AMI value (can be found at cloud-images.ubuntu.com)
+* inside **terraform.tfvars** , update IAM user access key and secret key.
 
+*run the following command inside this repo project root to initiatize resources
+
+```bash
+terraform init
+```
