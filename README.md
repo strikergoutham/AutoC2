@@ -1,11 +1,11 @@
 
 # AutoC2
 
-A quick C2 Deployer.
+A quick isolated C2 Deployer.
 
 ## Overview
 
-AutoC2 makes use of terraform + ansible to deploy a command and control server with isolated docker network within less than 5 mins in a single click!
+AutoC2 makes use of terraform + ansible to deploy and hide a command and control server with isolated docker network within less than 5 mins in a single click!
 
 Brief outline of what the script does :
 
@@ -15,3 +15,11 @@ Brief outline of what the script does :
 
 
 These infrastructure can be setup and teardown in very limited time.
+
+## Prerequisites
+
+* terraform must be installed
+* ansible(python 3)must be installed.
+* your IAM account credentials (Aws access key and secret key) with admin privileges.
+* AWS Region to be deployed and image(tested on ubuntu and works on debain) AMI code.
+
