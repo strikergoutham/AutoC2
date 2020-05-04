@@ -33,4 +33,8 @@ pip3 install ansible
 
 * your IAM account credentials (Aws access key and secret key) with admin privileges.
 * AWS Region to be deployed and image(tested on ubuntu and works on debain) AMI code.
+* set environment variable to ignore ssh key trust warnings
+```bash
+export ANSIBLE_HOST_KEY_CHECKING=False
+```
 
