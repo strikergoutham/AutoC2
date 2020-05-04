@@ -58,3 +58,8 @@ ssh-keygen -f keyy
 ```bash
 terraform init
 ```
+
+* Now run the following command to bring up the c2 server . this inturn calls up the ansible playbook to set up the software provisioning.
+```bash
+terraform apply
+```
