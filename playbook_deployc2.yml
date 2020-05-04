@@ -1,0 +1,7 @@
+---
+- name: deploy docker c2 server
+  hosts: all
+  become: true
+  roles:
+    - role: DeployCC
+      
