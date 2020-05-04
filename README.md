@@ -3,7 +3,7 @@
 
 A quick C2 Deployer.
 
-## High Level Overview
+## Overview
 
 AutoC2 makes use of terraform + ansible to deploy a command and control server with isolated docker network within less than 5 mins in a single click!
 
