@@ -83,3 +83,4 @@ sudo docker container exec -it msf /bin/bash
 ./msfconsole -r docker_delivery.rc
 
 ```
+* By default it generates payload for linux x64 systems.can be modified for different target by modifying **docker_delivery.rc** file
