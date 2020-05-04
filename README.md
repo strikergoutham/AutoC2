@@ -51,6 +51,7 @@ export ANSIBLE_HOST_KEY_CHECKING=False
 * first generate SSH keys for setting up public key authentication on any launched instances.  
 ```bash
 ssh-keygen -f keyy
+chmod 600 keyy
 ```
 * inside **vars.tf** , update the path to keys in PRIVATE_KEY , PUBLIC_KEY and other values such as region_aws and AMI value (can be found at cloud-images.ubuntu.com). 
 
