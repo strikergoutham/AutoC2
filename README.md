@@ -26,13 +26,16 @@ https://khast3x.club/posts/2020-02-09-C2-Protection-Socat-Docker/
 ## Prerequisites
 
 * terraform must be installed
+
 * ansible(python 3)must be installed.
 ```bash
 pip3 install ansible
 ```
 
 * your IAM account credentials (Aws access key and secret key) with admin privileges.
+
 * AWS Region to be deployed and image(tested on ubuntu and works on debain) AMI code.
+
 * set environment variable to ignore ssh key trust warnings
 ```bash
 export ANSIBLE_HOST_KEY_CHECKING=False
@@ -41,11 +44,13 @@ export ANSIBLE_HOST_KEY_CHECKING=False
 ## Getting Started
 
 * Only files we touch for changing configuration is **vars.tf** and **terraform.tfvars**.  
+
 * first generate SSH keys for setting up public key authentication on any launched instances.  
 ```bash
 ssh-keygen -f keyy
 ```
 * inside **vars.tf** , update the path to keys in PRIVATE_KEY , PUBLIC_KEY and other values such as region_aws and AMI value (can be found at cloud-images.ubuntu.com). 
+
 * inside **terraform.tfvars** , update IAM user access key and secret key. 
 
 * run the following command inside this repo project root to initiatize resources. 
