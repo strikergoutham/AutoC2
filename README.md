@@ -1,7 +1,7 @@
 
-Welcome to the AutoC2 wiki!
+# AutoC2
 
-**AutoC2 ** makes use of terraform + ansible to deploy a command and control server with isolated docker network within less than 5 mins in a single click!
+AutoC2 makes use of terraform + ansible to deploy a command and control server with isolated docker network within less than 5 mins in a single click!
 
 Brief outline of what the script does :
 
