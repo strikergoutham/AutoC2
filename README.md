@@ -13,6 +13,10 @@ Brief outline of what the script does :
 
 2. setup the C2 server which is not exposed to the internet with the help of isolated docker network which consists of multiple socat redirectors and a metasploit container instance.
 
+3. uses meterpreter_reverse_http as payload and similar payloads such as 
+meterpreter_reverse_https and meterpreter_reverse_tcp works as well. (requires modification to docker_delivery.rc file)
+
+
 
 These infrastructure can be setup and teardown in very limited time.
 
