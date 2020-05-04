@@ -1,0 +1,58 @@
+---
+
+- name: clearout old docker installation(if present)
+  apt:
+    pkg:
+    - docker-engine
+    - docker
+    - docker.io
+    state: absent
+
+
+- name: Update repositories cache and install required packages package
+  apt:
+    pkg:
+    - python3-pip
+    - virtualenv
+    - apt-transport-https
+    - python3-setuptools
+    - curl
+    - docker.io
+    update_cache: yes
+
+- name: install python packages required for docker SDK
+  pip:
+   name: docker-py
+
+- name: Start Docker
+  systemd:
+    state: started
+    name: docker
+
+- name: create an isolated network
+  docker_network:
+    name: isolated_net1
+
+ 
+- name: "start socat container 1(delivery)"
+  shell: docker run --rm -d -p 443:443 --network isolated_net1 --name socat_delivery alpine/socat -v TCP4-LISTEN:443,fork TCP4:msf:8080
+
+- name: "start socat container 2(handler)"
+  shell: docker run --rm -d -p 80:80 --network isolated_net1 --name socat_handler alpine/socat -v TCP4-LISTEN:80,fork TCP4:msf:4444
+
+- name: pull and start msf container in detach mode
+  docker_container:
+    name: msf
+    image: phocean/msf
+    state: started
+    detach: true
+    tty: true
+    networks:
+      - name: isolated_net1
+    networks_cli_compatible: true
+    volumes:
+      - /tmp/docker_delivery.rc:/opt/metasploit-framework/docker_delivery.rc
+
+
+
+
