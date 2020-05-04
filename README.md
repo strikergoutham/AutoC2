@@ -3,6 +3,9 @@
 
 A quick isolated C2 Deployer.
 
+![GitHub Logo](/demo_screenshots/AutoC2_1.PNG)
+
+
 ## Overview
 
 AutoC2 makes use of terraform + ansible to deploy and hide a command and control server with isolated docker network within less than 5 mins in a single click!
