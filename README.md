@@ -101,6 +101,7 @@ chmod +x delivery
 ./delivery&
 ```
 ![AutoC2](/demo_screenshots/Auto_victim1.PNG)
+![AutoC2](/demo_screenshots/AutoC2_7.PNG)
 * Finally to destroy the infrastructure completely(use this with caution!) use the following command :
 ```bash
 terraform destroy
