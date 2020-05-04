@@ -38,7 +38,11 @@ pip3 install ansible
 export ANSIBLE_HOST_KEY_CHECKING=False
 ```
 
-##Getting Started
+## Getting Started
 
-* Only files we touch for changing configuration is vars.tf and terraform.tfvars
+* Only files we touch for changing configuration is **vars.tf** and **terraform.tfvars**
+* first generate SSH keys for setting up public key authentication on any launched instances.
+```bash
+ssh-keygen -f keyy
+```
 
