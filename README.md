@@ -5,7 +5,6 @@ A quick isolated C2 Deployer.
 
 ![AutoC2](/demo_screenshots/AutoC2_1.PNG)
 
-### Author : Goutham Madhwaraj
 
 ## Overview
 
@@ -108,4 +107,5 @@ chmod +x delivery
 terraform destroy
 ```
 
+### Developed by: Goutham Madhwaraj
 
