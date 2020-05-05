@@ -5,6 +5,7 @@ A quick isolated C2 Deployer.
 
 ![AutoC2](/demo_screenshots/AutoC2_1.PNG)
 
+### Author : Goutham Madhwaraj
 
 ## Overview
 
@@ -24,7 +25,6 @@ This automated script is built over technique demonstrated by the author of foll
 https://khast3x.club/posts/2020-02-09-C2-Protection-Socat-Docker/
 
 
-## Author : Goutham Madhwaraj
 
 ## Prerequisites
 
